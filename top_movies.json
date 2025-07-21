@@ -1,0 +1,502 @@
+[
+    {
+        "title": "The Shawshank Redemption",
+        "vote_average": 8.5,
+        "id": 278
+    },
+    {
+        "title": "The Godfather",
+        "vote_average": 8.4,
+        "id": 238
+    },
+    {
+        "title": "Fight Club",
+        "vote_average": 8.3,
+        "id": 550
+    },
+    {
+        "title": "Pulp Fiction",
+        "vote_average": 8.3,
+        "id": 680
+    },
+    {
+        "title": "Schindler's List",
+        "vote_average": 8.3,
+        "id": 424
+    },
+    {
+        "title": "Whiplash",
+        "vote_average": 8.3,
+        "id": 244786
+    },
+    {
+        "title": "Spirited Away",
+        "vote_average": 8.3,
+        "id": 129
+    },
+    {
+        "title": "The Godfather: Part II",
+        "vote_average": 8.3,
+        "id": 240
+    },
+    {
+        "title": "The Dark Knight",
+        "vote_average": 8.2,
+        "id": 155
+    },
+    {
+        "title": "Forrest Gump",
+        "vote_average": 8.2,
+        "id": 13
+    },
+    {
+        "title": "The Empire Strikes Back",
+        "vote_average": 8.2,
+        "id": 1891
+    },
+    {
+        "title": "The Green Mile",
+        "vote_average": 8.2,
+        "id": 497
+    },
+    {
+        "title": "GoodFellas",
+        "vote_average": 8.2,
+        "id": 769
+    },
+    {
+        "title": "American History X",
+        "vote_average": 8.2,
+        "id": 73
+    },
+    {
+        "title": "One Flew Over the Cuckoo's Nest",
+        "vote_average": 8.2,
+        "id": 510
+    },
+    {
+        "title": "Psycho",
+        "vote_average": 8.2,
+        "id": 539
+    },
+    {
+        "title": "12 Angry Men",
+        "vote_average": 8.2,
+        "id": 389
+    },
+    {
+        "title": "Howl's Moving Castle",
+        "vote_average": 8.2,
+        "id": 4935
+    },
+    {
+        "title": "Princess Mononoke",
+        "vote_average": 8.2,
+        "id": 128
+    },
+    {
+        "title": "Once Upon a Time in America",
+        "vote_average": 8.2,
+        "id": 311
+    },
+    {
+        "title": "Inception",
+        "vote_average": 8.1,
+        "id": 27205
+    },
+    {
+        "title": "Interstellar",
+        "vote_average": 8.1,
+        "id": 157336
+    },
+    {
+        "title": "The Lord of the Rings: The Return of the King",
+        "vote_average": 8.1,
+        "id": 122
+    },
+    {
+        "title": "Star Wars",
+        "vote_average": 8.1,
+        "id": 11
+    },
+    {
+        "title": "Se7en",
+        "vote_average": 8.1,
+        "id": 807
+    },
+    {
+        "title": "The Silence of the Lambs",
+        "vote_average": 8.1,
+        "id": 274
+    },
+    {
+        "title": "Memento",
+        "vote_average": 8.1,
+        "id": 77
+    },
+    {
+        "title": "The Shining",
+        "vote_average": 8.1,
+        "id": 694
+    },
+    {
+        "title": "The Usual Suspects",
+        "vote_average": 8.1,
+        "id": 629
+    },
+    {
+        "title": "Room",
+        "vote_average": 8.1,
+        "id": 264644
+    },
+    {
+        "title": "Dead Poets Society",
+        "vote_average": 8.1,
+        "id": 207
+    },
+    {
+        "title": "The Good, the Bad and the Ugly",
+        "vote_average": 8.1,
+        "id": 429
+    },
+    {
+        "title": "City of God",
+        "vote_average": 8.1,
+        "id": 598
+    },
+    {
+        "title": "Once Upon a Time in the West",
+        "vote_average": 8.1,
+        "id": 335
+    },
+    {
+        "title": "The Lord of the Rings: The Fellowship of the Ring",
+        "vote_average": 8.0,
+        "id": 120
+    },
+    {
+        "title": "The Lord of the Rings: The Two Towers",
+        "vote_average": 8.0,
+        "id": 121
+    },
+    {
+        "title": "Inside Out",
+        "vote_average": 8.0,
+        "id": 150540
+    },
+    {
+        "title": "Back to the Future",
+        "vote_average": 8.0,
+        "id": 105
+    },
+    {
+        "title": "The Imitation Game",
+        "vote_average": 8.0,
+        "id": 205596
+    },
+    {
+        "title": "The Lion King",
+        "vote_average": 8.0,
+        "id": 8587
+    },
+    {
+        "title": "The Grand Budapest Hotel",
+        "vote_average": 8.0,
+        "id": 120467
+    },
+    {
+        "title": "The Prestige",
+        "vote_average": 8.0,
+        "id": 1124
+    },
+    {
+        "title": "Reservoir Dogs",
+        "vote_average": 8.0,
+        "id": 500
+    },
+    {
+        "title": "Scarface",
+        "vote_average": 8.0,
+        "id": 111
+    },
+    {
+        "title": "Taxi Driver",
+        "vote_average": 8.0,
+        "id": 103
+    },
+    {
+        "title": "Apocalypse Now",
+        "vote_average": 8.0,
+        "id": 28
+    },
+    {
+        "title": "Oldboy",
+        "vote_average": 8.0,
+        "id": 670
+    },
+    {
+        "title": "The Pianist",
+        "vote_average": 8.0,
+        "id": 423
+    },
+    {
+        "title": "Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",
+        "vote_average": 8.0,
+        "id": 935
+    },
+    {
+        "title": "It's a Wonderful Life",
+        "vote_average": 8.0,
+        "id": 1585
+    },
+    {
+        "title": "Guardians of the Galaxy",
+        "vote_average": 7.9,
+        "id": 118340
+    },
+    {
+        "title": "The Matrix",
+        "vote_average": 7.9,
+        "id": 603
+    },
+    {
+        "title": "The Wolf of Wall Street",
+        "vote_average": 7.9,
+        "id": 106646
+    },
+    {
+        "title": "Inglourious Basterds",
+        "vote_average": 7.9,
+        "id": 16869
+    },
+    {
+        "title": "Gone Girl",
+        "vote_average": 7.9,
+        "id": 210577
+    },
+    {
+        "title": "Gladiator",
+        "vote_average": 7.9,
+        "id": 98
+    },
+    {
+        "title": "Saving Private Ryan",
+        "vote_average": 7.9,
+        "id": 857
+    },
+    {
+        "title": "Return of the Jedi",
+        "vote_average": 7.9,
+        "id": 1892
+    },
+    {
+        "title": "Alien",
+        "vote_average": 7.9,
+        "id": 348
+    },
+    {
+        "title": "The Departed",
+        "vote_average": 7.9,
+        "id": 1422
+    },
+    {
+        "title": "Her",
+        "vote_average": 7.9,
+        "id": 152601
+    },
+    {
+        "title": "12 Years a Slave",
+        "vote_average": 7.9,
+        "id": 76203
+    },
+    {
+        "title": "Eternal Sunshine of the Spotless Mind",
+        "vote_average": 7.9,
+        "id": 38
+    },
+    {
+        "title": "Blade Runner",
+        "vote_average": 7.9,
+        "id": 78
+    },
+    {
+        "title": "American Beauty",
+        "vote_average": 7.9,
+        "id": 14
+    },
+    {
+        "title": "Prisoners",
+        "vote_average": 7.9,
+        "id": 146233
+    },
+    {
+        "title": "2001: A Space Odyssey",
+        "vote_average": 7.9,
+        "id": 62
+    },
+    {
+        "title": "Dallas Buyers Club",
+        "vote_average": 7.9,
+        "id": 152532
+    },
+    {
+        "title": "Good Will Hunting",
+        "vote_average": 7.9,
+        "id": 489
+    },
+    {
+        "title": "Requiem for a Dream",
+        "vote_average": 7.9,
+        "id": 641
+    },
+    {
+        "title": "There Will Be Blood",
+        "vote_average": 7.9,
+        "id": 7345
+    },
+    {
+        "title": "Casablanca",
+        "vote_average": 7.9,
+        "id": 289
+    },
+    {
+        "title": "Django Unchained",
+        "vote_average": 7.8,
+        "id": 68718
+    },
+    {
+        "title": "Shutter Island",
+        "vote_average": 7.8,
+        "id": 11324
+    },
+    {
+        "title": "WALL\u00b7E",
+        "vote_average": 7.8,
+        "id": 10681
+    },
+    {
+        "title": "Big Hero 6",
+        "vote_average": 7.8,
+        "id": 177572
+    },
+    {
+        "title": "The Truman Show",
+        "vote_average": 7.8,
+        "id": 37165
+    },
+    {
+        "title": "The Theory of Everything",
+        "vote_average": 7.8,
+        "id": 266856
+    },
+    {
+        "title": "Am\u00e9lie",
+        "vote_average": 7.8,
+        "id": 194
+    },
+    {
+        "title": "Gran Torino",
+        "vote_average": 7.8,
+        "id": 13223
+    },
+    {
+        "title": "Into the Wild",
+        "vote_average": 7.8,
+        "id": 5915
+    },
+    {
+        "title": "The Big Lebowski",
+        "vote_average": 7.8,
+        "id": 115
+    },
+    {
+        "title": "Spotlight",
+        "vote_average": 7.8,
+        "id": 314365
+    },
+    {
+        "title": "Trainspotting",
+        "vote_average": 7.8,
+        "id": 627
+    },
+    {
+        "title": "About Time",
+        "vote_average": 7.8,
+        "id": 122906
+    },
+    {
+        "title": "The Help",
+        "vote_average": 7.8,
+        "id": 50014
+    },
+    {
+        "title": "Monty Python and the Holy Grail",
+        "vote_average": 7.8,
+        "id": 762
+    },
+    {
+        "title": "The Thing",
+        "vote_average": 7.8,
+        "id": 1091
+    },
+    {
+        "title": "Stand by Me",
+        "vote_average": 7.8,
+        "id": 235
+    },
+    {
+        "title": "Casino",
+        "vote_average": 7.8,
+        "id": 524
+    },
+    {
+        "title": "Amadeus",
+        "vote_average": 7.8,
+        "id": 279
+    },
+    {
+        "title": "Annie Hall",
+        "vote_average": 7.8,
+        "id": 703
+    },
+    {
+        "title": "Up",
+        "vote_average": 7.7,
+        "id": 14160
+    },
+    {
+        "title": "Harry Potter and the Prisoner of Azkaban",
+        "vote_average": 7.7,
+        "id": 673
+    },
+    {
+        "title": "Toy Story",
+        "vote_average": 7.7,
+        "id": 862
+    },
+    {
+        "title": "Kill Bill: Vol. 1",
+        "vote_average": 7.7,
+        "id": 24
+    },
+    {
+        "title": "V for Vendetta",
+        "vote_average": 7.7,
+        "id": 752
+    },
+    {
+        "title": "Terminator 2: Judgment Day",
+        "vote_average": 7.7,
+        "id": 280
+    },
+    {
+        "title": "Raiders of the Lost Ark",
+        "vote_average": 7.7,
+        "id": 85
+    },
+    {
+        "title": "Catch Me If You Can",
+        "vote_average": 7.7,
+        "id": 640
+    }
+]

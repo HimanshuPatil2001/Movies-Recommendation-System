@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Movie Recommender</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- ✅ Favicon -->
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='popcorn.png') }}">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #0d0d0d, #1a1a2e, #2c003e, #3b0a65);
+      color: #f0f0f0;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2rem;
+    }
+
+    .search-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+
+    input[type="text"] {
+      padding: 10px;
+      width: 300px;
+      border-radius: 20px;
+      border: none;
+      text-align: center;
+      font-size: 1rem;
+      background-color: #1a1a1a;
+      color: #fff;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 20px;
+      background-color: #84dfff;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #60c4f6;
+    }
+
+    .movie-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 10px;
+  overflow: visible; /* changed from hidden */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 0px rgba(138, 43, 226, 0);
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(138, 43, 226, 0.6);
+  z-index: 5;
+}
+
+.movie-tooltip {
+  display: none;
+  position: absolute;
+  top: -10px;
+  left: 100%;
+  transform: translateX(10px);
+  width: 250px;
+  background: rgba(20, 20, 30, 0.75);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  color: #fff;
+  font-size: 0.9rem;
+  padding: 12px;
+  line-height: 1.5;
+  white-space: normal;
+  z-index: 10;
+}
+
+.card:hover .movie-tooltip {
+  display: block;
+}
+
+
+    .card img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    .card-body {
+      display: flex;
+      flex-direction: column;
+      margin-top: 10px;
+    }
+
+    .card-body h5 {
+      font-size: 1rem;
+      margin: 0 0 5px;
+      color: #fff;
+    }
+
+    .card-body p {
+      font-size: 0.85rem;
+      color: #ccc;
+      margin: 2px 0;
+    }
+
+
+    @media (max-width: 600px) {
+      input[type="text"] {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="text-center mb-4">
+    <h1>🎬 Movie Recommender System</h1>
+    <form action="/recommend" method="POST" class="search-form" style="margin-left: 350px;padding: 15px;">
+      <input type="text" name="movie" id="movie-input" placeholder="Search for a movie..." list="movie-list" required>
+      <button type="submit">Recommend</button>
+      <datalist id="movie-list">
+        {% for title in movie_titles %}
+          <option value="{{ title }}">
+        {% endfor %}
+      </datalist>
+    </form>
+  </div>
+
+  <div class="movie-grid" id="movie-container"></div>
+</div>
+
+<!-- Movie data passed from Flask -->
+<script id="movie-data" type="application/json">
+  {{ movies | tojson | safe }}
+</script>
+
+<!-- JS for Tooltip and Movie Cards -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const jsonData = document.getElementById('movie-data').textContent;
+  const allMovies = JSON.parse(jsonData);
+
+  const container = document.getElementById('movie-container');
+  const batchSize = 14;
+  let currentIndex = 0;
+
+  function createCard(movie) {
+    const card = document.createElement('div');
+    card.className = 'card';
+
+    card.innerHTML = `
+      <img src="${movie.poster}" alt="${movie.title}">
+      <div class="card-body">
+        <h5>${movie.title}</h5>
+        <p><strong>Genres:</strong> ${movie.genres}</p>
+        <p><strong>⭐ ${movie.rating || 'N/A'}</strong> (${movie.votes || 0} votes)</p>
+        <p>📅 ${movie.release_year}</p>
+      </div>
+      <div class="movie-tooltip">${movie.overview || 'No description available.'}</div>
+    `;
+
+    const tooltip = card.querySelector('.movie-tooltip');
+
+    card.addEventListener('mousemove', (e) => {
+      tooltip.style.display = 'block';
+      tooltip.style.top = `${e.offsetY}px`;
+      tooltip.style.left = `${e.offsetX}px`;
+    });
+
+    card.addEventListener('mouseleave', () => {
+      tooltip.style.display = 'none';
+    });
+
+    return card;
+  }
+
+  function revealMoreMovies() {
+  if (currentIndex >= allMovies.length) {
+    return;  // Stop if all movies are loaded
+  }
+
+  const end = currentIndex + batchSize;
+  const moviesToShow = allMovies.slice(currentIndex, end);
+
+  moviesToShow.forEach(movie => {
+    const card = createCard(movie);
+    container.appendChild(card);
+  });
+
+  currentIndex = end;
+}
+
+
+  function handleScroll() {
+    const scrollBottom = window.scrollY + window.innerHeight;
+    const pageHeight = document.body.offsetHeight;
+
+    if (scrollBottom + 300 >= pageHeight) {
+      revealMoreMovies();
+    }
+  }
+
+  // Load first batch
+  revealMoreMovies();
+
+  // Attach scroll handler
+  window.addEventListener('scroll', handleScroll);
+});
+</script>
+
+
+</body>
+</html>
